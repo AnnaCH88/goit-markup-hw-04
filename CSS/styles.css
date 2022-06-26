@@ -16,6 +16,9 @@
 --footer-text-color: #FFFFFF;
 --button-backgound-color: #F5F4FA;
 --section-background-color: #F5F4FA;
+--border-color: #AFB1B8;
+--client-logo-color: #AFB1B8;
+
 
 
 }
@@ -148,9 +151,6 @@ img {
     
 }
 
-
-
-
 .auth-nav .link{
     display: block;
     padding-top: 32px;
@@ -167,10 +167,20 @@ img {
 
 /* Hero */
 .hero {
+    background-color: #2F303A;
     padding-top: 200px;
     padding-bottom: 200px;
-
-    background-color:var(--footer-bg-color);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/Img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-color: #2F303A;
     text-align: center;
   
 }
@@ -231,20 +241,47 @@ img {
 /* Features */
 .features-list {
     display: flex;
-    padding-inline-start: unset;
+    justify-content: center;
+    
+
         
 }
-.features-list .item {
-    width: 270px;
+.features-list .item::before
+
+{   display: flex;
+    content: "";
+    height: 120px;
     margin-right: 30px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--button-backgound-color);
+    border-radius: 4px;
       
 }
 .features-list .item:nth-child(4n) {
     margin-right: 0;
+
+}
+
+.icon-antenna::before {
+    background-image: url("../images/icons.svg/antenna\ 1.svg");
+}
+
+.icon-clock::before {
+    background-image: url('../images/icons.svg/clock\ 1.svg');
+}
+
+.icon-diagram::before {
+    background-image: url("../images/icons.svg/diagram\ 1.svg");
+}
+
+.icon-astronaut::before {
+    background-image: url('../images/icons.svg/astronaut\ 1.svg');
 }
 
 .features-list .title
-{   
+{   margin-top: 30px;
     margin-bottom: 10px;
 
     color: var(--secondary-text-color);
@@ -257,6 +294,7 @@ img {
 .features-text {
     color: var(--main-text-color);
     line-height: 1.7;  
+    width: 270px;
 
 }
     
@@ -330,6 +368,60 @@ img {
     line-height: 1.18;      
     
 }
+
+/* Clients */
+.clients {
+    background-color: var(--main-bg-color);
+}
+.client-list {
+    display: flex;
+   
+   
+}
+
+.client-list .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  
+    width: 170px;
+    height: 92px;    
+
+      
+    background-color: var(--main-bg-color);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.client-list .item:nth-child(4) {
+    margin-right: 30px;
+}
+
+.client-icon {
+    width: 106px;
+    height: 60px;
+    fill: var(--client-logo-color);
+    
+}
+
+.logo:hover {
+    fill: var(--accent-color);
+}
+
+.client-list .link {
+   cursor: pointer;
+}
+
+.client-list .item:hover,
+.client-list .item:focus {
+    border: 1px solid var(--accent-color);
+
+}
+
+
+
+
 
 /* Portfolio */
 
